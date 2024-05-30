@@ -70,19 +70,19 @@
         },
         "addCompound": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/addCompound-4d6447776a63704f5a52-build.zip"
+          "s3Key": "amplify-builds/addCompound-48453033767837753059-build.zip"
         },
         "createCompoundComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createCompoundComment-32726235426d766d7355-build.zip"
+          "s3Key": "amplify-builds/createCompoundComment-696948644b4f6a376b4a-build.zip"
         },
         "createStack": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createStack-7137356a656a64694f6e-build.zip"
+          "s3Key": "amplify-builds/createStack-6b34432f626261495857-build.zip"
         },
         "createStackComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createStackComment-773234706173476c3965-build.zip"
+          "s3Key": "amplify-builds/createStackComment-58437a39584d42766959-build.zip"
         },
         "upvoteCompoundComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -94,7 +94,7 @@
         },
         "addSNP": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/addSNP-51685745313153524373-build.zip"
+          "s3Key": "amplify-builds/addSNP-6d2b6a6b533233525742-build.zip"
         },
         "modifyStack": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -116,20 +116,48 @@
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
           "s3Key": "amplify-builds/modifyStackComment-3839757646767934436a-build.zip"
         },
-        "getCompounds": {},
-        "getCompound": {},
-        "getCompoundComments": {},
-        "getStacks": {},
-        "getStack": {},
-        "getStackComments": {},
-        "getSNPs": {},
-        "getSNP": {},
-        "getUser": {}
+        "getCompounds": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getCompounds-6f4c6172382b622f6b51-build.zip"
+        },
+        "getCompound": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getCompound-496a6a34565953304f4c-build.zip"
+        },
+        "getCompoundComments": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getCompoundComments-386c724c623371614368-build.zip"
+        },
+        "getStacks": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getStacks-523572756e4667554738-build.zip"
+        },
+        "getStack": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getStack-73455765494863472f67-build.zip"
+        },
+        "getStackComments": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getStackComments-6650317337783375304d-build.zip"
+        },
+        "getSNPs": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getSNPs-454f6d46457861614f52-build.zip"
+        },
+        "getSNP": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getSNP-35734968456171457462-build.zip"
+        },
+        "getUser": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getUser-4d72564a544c71732b70-build.zip"
+        }
       },
       "api": {
         "compounds": {},
         "stacks": {},
-        "genetics": {}
+        "genetics": {},
+        "users": {}
       }
     }
   }

@@ -750,6 +750,150 @@
         }
       ]
     },
+    "AMPLIFY_function_getCompoundComments_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompoundComments"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCompoundComments_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompoundComments"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCompound_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCompound_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCompounds_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompounds"
+        }
+      ]
+    },
+    "AMPLIFY_function_getCompounds_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getCompounds"
+        }
+      ]
+    },
+    "AMPLIFY_function_getSNP_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getSNP"
+        }
+      ]
+    },
+    "AMPLIFY_function_getSNP_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getSNP"
+        }
+      ]
+    },
+    "AMPLIFY_function_getSNPs_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getSNPs"
+        }
+      ]
+    },
+    "AMPLIFY_function_getSNPs_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getSNPs"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStackComments_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStackComments"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStackComments_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStackComments"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStack_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStack_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStacks_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStacks"
+        }
+      ]
+    },
+    "AMPLIFY_function_getStacks_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getStacks"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUser_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUser"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUser_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUser"
+        }
+      ]
+    },
     "AMPLIFY_function_modifyCompoundComment_deploymentBucketName": {
       "usedBy": [
         {
