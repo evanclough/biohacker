@@ -2,7 +2,17 @@
   "auth": {
     "biohacker6d6df260": {
       "customAuth": false,
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "biohacker6d6df260PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -25,9 +35,48 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "biohacker6d6df260"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
+    }
+  },
+  "function": {
+    "biohacker6d6df260PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
+    "AMPLIFY_function_biohacker6d6df260PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "biohacker6d6df260PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_biohacker6d6df260PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "biohacker6d6df260PostConfirmation"
+        }
+      ]
+    },
     "AMPLIFY_storage_compound_arn": {
       "usedBy": [
         {
@@ -67,10 +116,240 @@
           "resourceName": "compound"
         }
       ]
+    },
+    "AMPLIFY_storage_compoundcomments_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_compoundcomments_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_compoundcomments_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_compoundcomments_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_compoundcomments_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snp_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snp_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snp_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snp_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snp_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stacks_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stacks_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stacks_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stacks_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stacks_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stackscomments_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stackscomments_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stackscomments_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stackscomments_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_stackscomments_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ]
+    },
+    "AMPLIFY_storage_users_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ]
+    },
+    "AMPLIFY_storage_users_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ]
+    },
+    "AMPLIFY_storage_users_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ]
+    },
+    "AMPLIFY_storage_users_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ]
+    },
+    "AMPLIFY_storage_users_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ]
     }
   },
   "storage": {
     "compound": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "compoundcomments": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "snp": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "stacks": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "stackscomments": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    },
+    "users": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "DynamoDB",

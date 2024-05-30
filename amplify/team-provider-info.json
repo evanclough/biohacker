@@ -9,11 +9,13 @@
       "UnauthRoleName": "amplify-biohacker-dev-5f0d0-unauthRole",
       "StackName": "amplify-biohacker-dev-5f0d0",
       "StackId": "arn:aws:cloudformation:us-east-2:590184010291:stack/amplify-biohacker-dev-5f0d0/4ecc9980-1e16-11ef-8076-0a4f90e6ce1b",
-      "AmplifyAppId": "dhbd39q5f60sj"
+      "AmplifyAppId": "dhbd39q5f60sj",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-biohacker-dev-5f0d0-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
-        "biohacker6d6df260": {}
+        "biohacker6d6df260": {},
+        "userPoolGroups": {}
       },
       "storage": {
         "compound": {
@@ -22,6 +24,47 @@
           "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/compound",
           "partitionKeyName": "id",
           "partitionKeyType": "S"
+        },
+        "compoundcomments": {
+          "tableName": "compound_comments",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/compound_comments",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "snp": {
+          "tableName": "snp",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/snp",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "stacks": {
+          "tableName": "stacks",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/stacks",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "stackscomments": {
+          "tableName": "stacks_comments",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/stacks_comments",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        },
+        "users": {
+          "tableName": "users",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/users",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        }
+      },
+      "function": {
+        "biohacker6d6df260PostConfirmation": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/biohacker6d6df260PostConfirmation-4a656b64686d58653232-build.zip"
         }
       }
     }
