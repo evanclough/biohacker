@@ -1,4 +1,120 @@
 {
+  "api": {
+    "compounds": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "addCompound"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createCompoundComment"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "upvoteCompoundComment"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "modifyCompound"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "modifyCompoundComment"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "genetics": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "addSNP"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "modifySNP"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "stacks": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createStack"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "createStackComment"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "upvoteStackComment"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "modifyStack"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "modifyStackComment"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "auth": {
     "biohacker6d6df260": {
       "customAuth": false,
@@ -54,13 +170,273 @@
     }
   },
   "function": {
+    "addCompound": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "compound"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "addSNP": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "biohacker6d6df260PostConfirmation": {
       "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createCompoundComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createStack": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "createStackComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "modifyCompound": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "compound"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "modifyCompoundComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "modifySNP": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "snp"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "modifyStack": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "stacks"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "modifyStackComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "upvoteCompoundComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "compoundcomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "upvoteStackComment": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "stackscomments"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
+    "AMPLIFY_function_addCompound_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_addCompound_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_addSNP_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addSNP"
+        }
+      ]
+    },
+    "AMPLIFY_function_addSNP_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addSNP"
+        }
+      ]
+    },
     "AMPLIFY_function_biohacker6d6df260PostConfirmation_deploymentBucketName": {
       "usedBy": [
         {
@@ -74,6 +450,166 @@
         {
           "category": "function",
           "resourceName": "biohacker6d6df260PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_createCompoundComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_createCompoundComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_createStackComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createStackComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_createStackComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createStackComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_createStack_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_createStack_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "createStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyCompoundComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyCompoundComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyCompound_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyCompound_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyCompound"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifySNP_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifySNP"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifySNP_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifySNP"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyStackComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyStackComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyStackComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyStackComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyStack_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_modifyStack_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "modifyStack"
+        }
+      ]
+    },
+    "AMPLIFY_function_upvoteCompoundComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "upvoteCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_upvoteCompoundComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "upvoteCompoundComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_upvoteStackComment_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "upvoteStackComment"
+        }
+      ]
+    },
+    "AMPLIFY_function_upvoteStackComment_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "upvoteStackComment"
         }
       ]
     },

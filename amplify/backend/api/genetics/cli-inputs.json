@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "paths": {
+    "/addSNP": {
+      "name": "/addSNP",
+      "lambdaFunction": "addSNP",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/modifySNP": {
+      "name": "/modifySNP",
+      "lambdaFunction": "modifySNP",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

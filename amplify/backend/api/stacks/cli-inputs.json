@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "paths": {
+    "/createStack": {
+      "name": "/createStack",
+      "lambdaFunction": "createStack",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/createStackComment": {
+      "name": "/createStackComment",
+      "lambdaFunction": "createStackComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/upvoteStackComment": {
+      "name": "/upvoteStackComment",
+      "lambdaFunction": "upvoteStackComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/modifyStack": {
+      "name": "/modifyStack",
+      "lambdaFunction": "modifyStack",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/modifyStackComment": {
+      "name": "/modifyStackComment",
+      "lambdaFunction": "modifyStackComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

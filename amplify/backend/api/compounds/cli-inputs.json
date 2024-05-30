@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "paths": {
+    "/addCompound": {
+      "name": "/addCompound",
+      "lambdaFunction": "addCompound",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/createCompoundComment": {
+      "name": "/createCompoundComment",
+      "lambdaFunction": "createCompoundComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/upvoteCompoundComment": {
+      "name": "/upvoteCompoundComment",
+      "lambdaFunction": "upvoteCompoundComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/modifyCompound": {
+      "name": "/modifyCompound",
+      "lambdaFunction": "modifyCompound",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/modifyCompoundComment": {
+      "name": "/modifyCompoundComment",
+      "lambdaFunction": "modifyCompoundComment",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}
