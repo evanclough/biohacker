@@ -70,7 +70,7 @@
         },
         "addCompound": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/addCompound-386d5159576371574937-build.zip"
+          "s3Key": "amplify-builds/addCompound-424e3772354179707334-build.zip"
         },
         "createCompoundComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -150,7 +150,11 @@
         },
         "getUser": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getUser-417931414e7743316331-build.zip"
+          "s3Key": "amplify-builds/getUser-376730576c457767464f-build.zip"
+        },
+        "getUsers": {
+          "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+          "s3Key": "amplify-builds/getUsers-45617054523770747858-build.zip"
         }
       },
       "api": {

@@ -17,24 +17,37 @@ import {
        <Navbar data-bs-theme="dark" sticky="top" className="border-bottom bg-black border-light border-3">
         <Container>
         <Nav className="justify-content-start">
-            <Navbar.Brand className = "mx-3">
-              <Activity/>
-            </Navbar.Brand>
+            <NavLink to={"/"}>
+              <Navbar.Brand className = "mx-3">
+                <Activity/>
+              </Navbar.Brand>
+            </NavLink>
           </Nav>
         <Menu
           menuAlign="end"
           className="nav-menu"
         >
-          <NavLink
+          <NavLink className='my-btns'
             to={"/compounds"}
           >
-            <MenuItem className='my-btns'>
+            <MenuItem className="w-100" >
               compounds 
             </MenuItem>
           </NavLink>
-          <MenuItem className='my-btns'>
-            stacks 
-          </MenuItem>
+          <NavLink className='my-btns'
+            to={"/protocols"}
+          >
+            <MenuItem className="w-100" >
+              protocols 
+            </MenuItem>
+          </NavLink>
+          <NavLink className='my-btns'
+            to={"/users"}
+          >
+            <MenuItem className="w-100" >
+              users 
+            </MenuItem>
+          </NavLink>
           <MenuItem onClick={e => signOut()} className="my-btns">
           sign out
           </MenuItem>

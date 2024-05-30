@@ -11,6 +11,7 @@ import { Amplify } from 'aws-amplify';
 import amplifyconfig from './amplifyconfiguration.json';
 import {loader as compoundLoader} from './Compound';
 import {loader as protocolLoader} from './Protocol';
+import {loader as userLoader} from "./Profile";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,15 @@ const router = createBrowserRouter([
     path: "/protocols/:protocolId",
     element: <App tab={"protocol"}/>,
     loader: protocolLoader
+  },
+  {
+    path: "/users",
+    element: <App tab={"users"}/>
+  },
+  {
+    path: "/users/:userId",
+    element: <App tab={"user"}/>,
+    loader: userLoader
   }
 ]);
 

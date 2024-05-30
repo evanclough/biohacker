@@ -1,11 +1,13 @@
-const { DynamoDBClient, GetItemCommand } = require( "@aws-sdk/client-dynamodb" );
+const { DynamoDBClient } = require( "@aws-sdk/client-dynamodb" );
+const  { ScanCommand, DynamoDBDocumentClient } = require( "@aws-sdk/lib-dynamodb" );
 
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const bodyParser = require('body-parser')
 const express = require('express')
 
 const client = new DynamoDBClient({ region: process.env.TABLE_REGION });
-const path = "/getUser";
+
+const path = "/getUsers";
 
 // declare a new express app
 const app = express()
@@ -19,18 +21,11 @@ app.use(function(req, res, next) {
   next()
 });
 
-// gets a user given their id
+// gets all compounds
 app.get(path, async function(req, res) {
 
-  const id = req.query.id
-
-  const command = new GetItemCommand({
+  const command = new ScanCommand({
     TableName: "users",
-    Key: {
-      id: {
-        "S": id
-      }
-    },
     ProjectionExpression:"#N, #U, #V, #T, #D, #I, #G",
     ExpressionAttributeNames: {
       "#N": "name",
@@ -42,12 +37,14 @@ app.get(path, async function(req, res) {
       "#G": "genetics"
     }
   });
+  
   try {
     const response = await client.send(command);
     res.json(response);
   }catch(err){
-    res.json(err);
+    res.json(error);
   }
+  
 });
 
 

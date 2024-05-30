@@ -5,16 +5,18 @@
 * name: String
 * actions: List[Map]
     * action: String
-    * citation: String
+    * citations: List[String]
     * description: String
 * contraindications: List[Map]
-    * citation: String
+    * citations: List[String]
     * description: String
     * name: String
 * genetics: List[Map]
     * snp: String
     * effects: Map
-        * TBD
+        * citations: List[String]
+        * description: String
+        * name: String
 * research: List[Map]
     * citation: String
     * title: String
@@ -23,6 +25,12 @@
 * description: 
     * summary: String
     * moa: String
+* parents: List[Map]
+    * id: String
+    * name: String
+* children: List[Map]
+    * id: String
+    * name: String
 
 ### compound_comments
 * id: String (uuidv4)
@@ -88,6 +96,7 @@
 ### users
 * id: String(uuid)
 * name: String
+* username: String
 * email: String
 * accountCreationTimestamp: String (unix millies)
 * verified: Boolean
@@ -96,7 +105,7 @@
     * age: Number
     * weight: Number (kg)
     * height: Number (cm)
-    * genetics: List[Map]
+ * genetics: List[Map]
         * snp: String
         * bases: List[String] (A|T|C|G)
         * variant: String

@@ -13,6 +13,19 @@
           "delete"
         ]
       }
+    },
+    "/getUsers": {
+      "name": "/getUsers",
+      "lambdaFunction": "getUsers",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
-import { get, post } from "aws-amplify/api";
+import { get } from "aws-amplify/api";
 
+import { NavLink } from "react-router-dom";
+
+import Card from 'react-bootstrap/Card';
 import Spinner from 'react-bootstrap/Spinner';
-
+import Button from "react-bootstrap/Button";
 
 //search compounds
 function Compounds({params, user}) {
@@ -11,8 +14,9 @@ function Compounds({params, user}) {
     const [loading, setLoading] = useState(true);
 
 
+    //TODO: being called twice
     useEffect(() => {
-        console.log("balls1234");
+        document.title = "compounds"
         getCompounds();
     }, [])
 
@@ -25,7 +29,7 @@ function Compounds({params, user}) {
           
             const {body}= await restOperation.response;
             const response = await body.json();
-            setCompounds(response);
+            setCompounds(response.Items);
             setLoading(false);
         } catch (e) {
           console.log('get call failed: ', e);
@@ -36,14 +40,28 @@ function Compounds({params, user}) {
         <div>
             {
                 loading ? 
-                    <Spinner animation="border"/>
+                    <Spinner className="mx-auto mt-4" animation="border"/>
                 :
-                    <div>
-                        {JSON.stringify(compounds)}
+                    <div className="compounds-container">
+                        {compounds.map((compound, index) => (
+                            <Card className="compound-card" key={index}>
+                                <Card.Body className="compound-card-body">
+                                    <h3><NavLink className = "lnk" to={"/compounds/" + compound.id}>{compound.name}</NavLink></h3>
+                                    Tags: {compound.tags.map((tag, tagIndex) => (
+                                        <NavLink 
+                                            to={"/tags/" + tag} 
+                                            className="lnk" 
+                                            key={tagIndex}
+                                        >
+                                            {tag +( tagIndex === compound.tags.length - 1 ? "" : ", ")} 
+                                        </NavLink>
+                                    ))}
+                
+                                </Card.Body>
+                            </Card>
+                        ))}
                     </div>
             }
-
-            browse compounds
         </div>
     )
 }

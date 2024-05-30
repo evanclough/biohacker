@@ -32,6 +32,8 @@ app.post(path, async function(req, res) {
   const research = req.body["research"];
   const tags = req.body["tags"];
   const description = req.body["description"];
+  const children = req.body["children"];
+  const parents = req.body["parents"];
   const id = crypto.randomUUID();
 
   //todo: sanitize  
@@ -46,6 +48,8 @@ app.post(path, async function(req, res) {
       research,
       tags,
       description,
+      children,
+      parents,
       id
     }
   });
@@ -59,7 +63,6 @@ app.post(path, async function(req, res) {
   }
   
 });
-
 
 app.listen(3000, function() {
   console.log("App started")

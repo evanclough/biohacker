@@ -1,11 +1,15 @@
+
+/* basic dark theme */
 body {
   background-color: #000 !important;
 }
-body, p, h1, h2, h3, h4, h5, h6, span, div, /* Add more elements as needed */
-a, tr, td, th, button, input, textarea {
-  color: #fff !important; /* white color */
+body, p, h1, h2, h3, h4, h5, h6, span, div, 
+a, tr, td, th, button, input, textarea, label {
+  color: #fff !important;
 }
 
+
+/* theme for buttons to overwrite react bootstrap*/
 .my-btns {
   background-color: #222 !important;
   border: none !important;
@@ -15,6 +19,43 @@ a, tr, td, th, button, input, textarea {
   background-color: #444 !important;
 }
 
+/*dark theme for authenticator */
+[data-amplify-authenticator] [data-amplify-form] {
+  padding: var(--amplify-components-authenticator-form-padding);
+  background-color: black;
+  color: white;
+}
+
+[data-amplify-authenticator] [data-amplify-footer] {
+  background-color: black;
+  color: white;
+}
+
+.amplify-tabs {
+  border: none !important;
+  background-color: black !important;
+}
+
+.amplify-tabs__list {
+  background-color: black !important;  
+  padding-bottom: none !important;
+}
+.amplify-tabs__panel {
+  background-color: black !important;
+}
+.amplify-tabs__item--active {
+  background-color: #333 !important;
+}
+
+.amplify-tabs__item:hover {
+  background-color: #333 !important;
+}
+.amplify-tabs__item {
+  border-bottom: 1px solid white !important;
+}
+
+
+/*menu stuff */
 .nav-menu {
   border: none !important;
 }
@@ -47,4 +88,84 @@ a, tr, td, th, button, input, textarea {
 
 ::-webkit-scrollbar-button {
   display: none !important;
+}
+
+/*Compounds*/
+
+.compound-card {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  background-color: #222 !important;
+}
+
+.compound-card-body {
+
+}
+
+.compound-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.compounds-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.accordion-header, .accordion-body, .accordion-button, .accordion-item {
+  background-color: #333 !important;
+  border: none !important;
+}
+
+.accordion-button:hover{
+  background-color: #555 !important;
+  border: none !important;
+}
+.accordion-button:active, .accordion-button:focus  {
+  background-color: #333 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.accordion {
+  border: none !important;
+}
+
+/*profile */
+
+.profile-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.profile-card {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1em;
+  background-color: #222 !important;
+}
+
+
+/* links */
+
+.lnk {
+  text-decoration: none !important;
+}
+
+.lnk:hover, .lnk:active, .lnk:focus {
+  color: #00bfff !important;
+}
+
+.tag-btn:hover, .tag-btn:active, .tav-btn:focus {
+  background-color: #666 !important;
+  border: none !important;
 }

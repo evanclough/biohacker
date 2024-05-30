@@ -187,6 +187,14 @@
           ],
           "category": "function",
           "resourceName": "getUser"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getUsers"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -501,6 +509,25 @@
       "service": "Lambda"
     },
     "getUser": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "users"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getUsers": {
       "build": true,
       "dependsOn": [
         {
@@ -891,6 +918,22 @@
         {
           "category": "function",
           "resourceName": "getUser"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUsers_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUsers"
+        }
+      ]
+    },
+    "AMPLIFY_function_getUsers_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getUsers"
         }
       ]
     },
