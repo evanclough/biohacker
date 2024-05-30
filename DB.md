@@ -24,7 +24,7 @@
     * summary: String
     * moa: String
 
-### compound-comments
+### compound_comments
 * id: String (uuidv4)
 * compoundId: String
 * userId: String
@@ -52,7 +52,7 @@
 * timestamp: String (unix millies)
 * upvotes: Number
 
-### stacks-comments
+### stacks_comments
 * id: String (uuidv4)
 * userId: String
 * stackId: String

@@ -21,8 +21,7 @@ function App({ signOut, user }) {
        order: 5
      }
    },
-  }
-
+  };
 
   return (
     <Authenticator formFields={formFields} signUpAttributes={['email', 'name', 'preferred_username', 'password', 'confirm_password']}>
