@@ -65,6 +65,45 @@
           "delete"
         ]
       }
+    },
+    "/getCompounds": {
+      "name": "/getCompounds",
+      "lambdaFunction": "getCompounds",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/getCompound": {
+      "name": "/getCompound",
+      "lambdaFunction": "getCompound",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/getCompoundComments": {
+      "name": "/getCompoundComments",
+      "lambdaFunction": "getCompoundComments",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

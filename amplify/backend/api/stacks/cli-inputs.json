@@ -65,6 +65,45 @@
           "delete"
         ]
       }
+    },
+    "/getStacks": {
+      "name": "/getStacks",
+      "lambdaFunction": "getStacks",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/getStack": {
+      "name": "/getStack",
+      "lambdaFunction": "getStack",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/getStackComments": {
+      "name": "/getStackComments",
+      "lambdaFunction": "getStackComments",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

@@ -1,7 +1,10 @@
 {
   "request": {
     "userPoolId": "testID",
-    "userName": "testUser"
+    "userName": "testUser",
+    "userAttributes": {
+      "email": "evanclough99@gmail.com"
+    }
   },
   "response": {}
 }

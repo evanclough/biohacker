@@ -59,13 +59,14 @@
           "region": "us-east-2",
           "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/users",
           "partitionKeyName": "id",
-          "partitionKeyType": "S"
+          "partitionKeyType": "S",
+          "streamArn": "arn:aws:dynamodb:us-east-2:590184010291:table/users/stream/2024-05-30T03:51:29.971"
         }
       },
       "function": {
         "biohacker6d6df260PostConfirmation": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/biohacker6d6df260PostConfirmation-4a656b64686d58653232-build.zip"
+          "s3Key": "amplify-builds/biohacker6d6df260PostConfirmation-2f5438414f6f7570586b-build.zip"
         },
         "addCompound": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -114,7 +115,16 @@
         "modifyStackComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
           "s3Key": "amplify-builds/modifyStackComment-3839757646767934436a-build.zip"
-        }
+        },
+        "getCompounds": {},
+        "getCompound": {},
+        "getCompoundComments": {},
+        "getStacks": {},
+        "getStack": {},
+        "getStackComments": {},
+        "getSNPs": {},
+        "getSNP": {},
+        "getUser": {}
       },
       "api": {
         "compounds": {},

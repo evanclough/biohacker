@@ -26,6 +26,32 @@
           "delete"
         ]
       }
+    },
+    "/getSNPs": {
+      "name": "/getSNPs",
+      "lambdaFunction": "getSNPs",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/getSNP": {
+      "name": "/getSNP",
+      "lambdaFunction": "getSNP",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

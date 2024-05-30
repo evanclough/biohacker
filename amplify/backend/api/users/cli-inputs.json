@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "paths": {
+    "/getUser": {
+      "name": "/getUser",
+      "lambdaFunction": "getUser",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

@@ -14,8 +14,8 @@
     ],
     "smsAuthenticationMessage": "Your authentication code is {####}",
     "smsVerificationMessage": "Your verification code is {####}",
-    "emailVerificationSubject": "Biohacker - your verification code",
-    "emailVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "biohacker - your verification code",
+    "emailVerificationMessage": "your verification code is {####}",
     "defaultPasswordPolicy": false,
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
@@ -26,10 +26,14 @@
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
+      "name",
+      "preferred_username",
       "email"
     ],
     "userpoolClientReadAttributes": [
-      "email"
+      "email",
+      "name",
+      "preferred_username"
     ],
     "userpoolClientLambdaRole": "biohac6d6df260_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
@@ -70,7 +74,6 @@
         ]
       }
     ],
-    "thirdPartyAuth": false,
     "userPoolGroups": false,
     "adminQueries": false,
     "triggers": {
@@ -79,11 +82,12 @@
       ]
     },
     "hostedUI": false,
-    "authProviders": [],
     "parentStack": {
       "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"biohacker6d6df260PostConfirmation\"\n  }\n]"
+    "authTriggerConnections": "[\n  {\n    \"triggerType\": \"PostConfirmation\",\n    \"lambdaFunctionName\": \"biohacker6d6df260PostConfirmation\"\n  }\n]",
+    "authProviders": [],
+    "thirdPartyAuth": false
   }
 }
