@@ -1,6 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";import { time } from "console";
-const { ScanCommand } = require('@aws-sdk/lib-dynamodb');
+import { PutCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const bodyParser = require('body-parser')
 const express = require('express')
