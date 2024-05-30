@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-biohacker-dev-5f0d0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::590184010291:role/amplify-biohacker-dev-5f0d0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::590184010291:role/amplify-biohacker-dev-5f0d0-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
+      "UnauthRoleName": "amplify-biohacker-dev-5f0d0-unauthRole",
+      "StackName": "amplify-biohacker-dev-5f0d0",
+      "StackId": "arn:aws:cloudformation:us-east-2:590184010291:stack/amplify-biohacker-dev-5f0d0/4ecc9980-1e16-11ef-8076-0a4f90e6ce1b",
+      "AmplifyAppId": "dhbd39q5f60sj"
+    },
+    "categories": {
+      "auth": {
+        "biohacker6d6df260": {}
+      },
+      "storage": {
+        "compound": {
+          "tableName": "compound",
+          "region": "us-east-2",
+          "arn": "arn:aws:dynamodb:us-east-2:590184010291:table/compound",
+          "partitionKeyName": "id",
+          "partitionKeyType": "S"
+        }
+      }
+    }
+  }
+}
