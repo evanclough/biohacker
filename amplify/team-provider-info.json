@@ -70,19 +70,19 @@
         },
         "addCompound": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/addCompound-48453033767837753059-build.zip"
+          "s3Key": "amplify-builds/addCompound-386d5159576371574937-build.zip"
         },
         "createCompoundComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createCompoundComment-696948644b4f6a376b4a-build.zip"
+          "s3Key": "amplify-builds/createCompoundComment-6a627a7636735553394a-build.zip"
         },
         "createStack": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createStack-6b34432f626261495857-build.zip"
+          "s3Key": "amplify-builds/createStack-67354e4d543070424543-build.zip"
         },
         "createStackComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/createStackComment-58437a39584d42766959-build.zip"
+          "s3Key": "amplify-builds/createStackComment-666c774c47792f764544-build.zip"
         },
         "upvoteCompoundComment": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -94,7 +94,7 @@
         },
         "addSNP": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/addSNP-6d2b6a6b533233525742-build.zip"
+          "s3Key": "amplify-builds/addSNP-324e6b33306353746c32-build.zip"
         },
         "modifyStack": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
@@ -118,39 +118,39 @@
         },
         "getCompounds": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getCompounds-6f4c6172382b622f6b51-build.zip"
+          "s3Key": "amplify-builds/getCompounds-773745534b352f626c78-build.zip"
         },
         "getCompound": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getCompound-496a6a34565953304f4c-build.zip"
+          "s3Key": "amplify-builds/getCompound-714e2b786867474a5667-build.zip"
         },
         "getCompoundComments": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getCompoundComments-386c724c623371614368-build.zip"
+          "s3Key": "amplify-builds/getCompoundComments-79336f505a7544432f43-build.zip"
         },
         "getStacks": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getStacks-523572756e4667554738-build.zip"
+          "s3Key": "amplify-builds/getStacks-694f32674b686f2b4957-build.zip"
         },
         "getStack": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getStack-73455765494863472f67-build.zip"
+          "s3Key": "amplify-builds/getStack-4c664b4e6850506d447a-build.zip"
         },
         "getStackComments": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getStackComments-6650317337783375304d-build.zip"
+          "s3Key": "amplify-builds/getStackComments-516f7744747a772f4239-build.zip"
         },
         "getSNPs": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getSNPs-454f6d46457861614f52-build.zip"
+          "s3Key": "amplify-builds/getSNPs-59533974477449767367-build.zip"
         },
         "getSNP": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getSNP-35734968456171457462-build.zip"
+          "s3Key": "amplify-builds/getSNP-3065364a494f4f474e44-build.zip"
         },
         "getUser": {
           "deploymentBucketName": "amplify-biohacker-dev-5f0d0-deployment",
-          "s3Key": "amplify-builds/getUser-4d72564a544c71732b70-build.zip"
+          "s3Key": "amplify-builds/getUser-417931414e7743316331-build.zip"
         }
       },
       "api": {

@@ -1,12 +1,11 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { ScanCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+const { DynamoDBClient } = require( "@aws-sdk/client-dynamodb" );
+const  { ScanCommand, DynamoDBDocumentClient } = require( "@aws-sdk/lib-dynamodb" );
 
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const bodyParser = require('body-parser')
 const express = require('express')
 
 const client = new DynamoDBClient({ region: process.env.TABLE_REGION });
-const docClient = DynamoDBDocumentClient.from(client);
 
 const path = "/getSNPs";
 
@@ -26,14 +25,14 @@ app.use(function(req, res, next) {
 app.get(path, async function(req, res) {
 
   const command = new ScanCommand({
-    TableName: "SNP"
+    TableName: "snp"
   });
   
   try {
-    const response = await docClient.send(command);
-    return response;
+    const response = await client.send(command);
+    res.json(response);
   }catch(err){
-    return err;
+    res.json(err);
   }
   
 });

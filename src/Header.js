@@ -7,6 +7,7 @@ import {
   import Container from 'react-bootstrap/Container';
   import Navbar from 'react-bootstrap/Navbar';
   import { Activity } from 'react-feather';
+  import { NavLink } from 'react-router-dom';
   
   
   function Header({user, signOut}){
@@ -24,9 +25,13 @@ import {
           menuAlign="end"
           className="nav-menu"
         >
-          <MenuItem className='my-btns'>
-            compounds 
-          </MenuItem>
+          <NavLink
+            to={"/compounds"}
+          >
+            <MenuItem className='my-btns'>
+              compounds 
+            </MenuItem>
+          </NavLink>
           <MenuItem className='my-btns'>
             stacks 
           </MenuItem>

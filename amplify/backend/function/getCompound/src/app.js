@@ -1,5 +1,5 @@
-import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { GetCommand, DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
+const { DynamoDBClient } = require( "@aws-sdk/client-dynamodb" );
+const { GetCommand, DynamoDBDocumentClient } = require( "@aws-sdk/lib-dynamodb" );
 
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
 const bodyParser = require('body-parser')
@@ -36,9 +36,9 @@ app.get(path, async function(req, res) {
   
   try {
     const response = await docClient.send(command);
-    return response;
+    res.json(response);
   }catch(err){
-    return err;
+    res.json(err);
   }
   
 });

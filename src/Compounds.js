@@ -12,8 +12,9 @@ function Compounds({params, user}) {
 
 
     useEffect(() => {
+        console.log("balls1234");
         getCompounds();
-    })
+    }, [])
 
     async function getCompounds(){
         try {
@@ -38,11 +39,7 @@ function Compounds({params, user}) {
                     <Spinner animation="border"/>
                 :
                     <div>
-                        {compounds.map(compound => 
-                            <div> 
-                                {compound.toString()}
-                            </div>
-                        )}
+                        {JSON.stringify(compounds)}
                     </div>
             }
 
