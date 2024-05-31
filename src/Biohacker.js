@@ -4,6 +4,7 @@ import Protocol from "./Protocol";
 import Protocols from "./Protocols";
 import Users from "./Users";
 import Profile from "./Profile";
+import Landing from "./Landing";
 import Header from "./Header";
 
 function Biohacker({user, signOut, params}) {
@@ -23,8 +24,10 @@ function Biohacker({user, signOut, params}) {
                 return <Users params={params} user={user}/>
             case "user": 
                 return <Profile params={params} user={user}/>
+            case "landing":
+                return <Landing params={params} user={user} />
             default:
-                return <></>
+                return <Landing params={params} user={user} />
         }
     }
 

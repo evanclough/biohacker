@@ -16,7 +16,7 @@ import {loader as userLoader} from "./Profile";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App tab={"landing"}/>,
     errorElement: <div>{"404 :("}</div>
   },
   {
@@ -45,6 +45,10 @@ const router = createBrowserRouter([
     path: "/users/:userId",
     element: <App tab={"user"}/>,
     loader: userLoader
+  },
+  {
+    path: "/login",
+    element:  <App tab={"landing"} /> /* once site is not entirely behind auth, this can just be a link to the landing component wrapped in authenticator. for now we just chill tho */
   }
 ]);
 

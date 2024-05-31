@@ -26,6 +26,19 @@
           "delete"
         ]
       }
+    },
+    "/getMyProfile": {
+      "name": "/getMyProfile",
+      "lambdaFunction": "getMyProfile",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
     }
   }
 }

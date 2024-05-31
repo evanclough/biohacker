@@ -195,6 +195,14 @@
           ],
           "category": "function",
           "resourceName": "getUsers"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getMyProfile"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -408,6 +416,25 @@
           ],
           "category": "storage",
           "resourceName": "compound"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getMyProfile": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "users"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -822,6 +849,22 @@
         {
           "category": "function",
           "resourceName": "getCompounds"
+        }
+      ]
+    },
+    "AMPLIFY_function_getMyProfile_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getMyProfile"
+        }
+      ]
+    },
+    "AMPLIFY_function_getMyProfile_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getMyProfile"
         }
       ]
     },
