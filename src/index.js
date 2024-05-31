@@ -7,8 +7,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Amplify } from 'aws-amplify';
-import amplifyconfig from './amplifyconfiguration.json';
 import {loader as compoundLoader} from './Compound';
 import {loader as protocolLoader} from './Protocol';
 import {loader as userLoader} from "./Profile";
@@ -52,7 +50,6 @@ const router = createBrowserRouter([
   }
 ]);
 
-Amplify.configure(amplifyconfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

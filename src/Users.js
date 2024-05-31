@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { get } from "aws-amplify/api";
 
 import { NavLink } from "react-router-dom";
 
@@ -18,14 +17,10 @@ function Users({params, user}) {
 
     async function getUsers(){
         try {
-            const restOperation = get({
-                apiName: "users",
-                path:"/getUsers"
-            });
           
             const {body}= await restOperation.response;
             const response = await body.json();
-            setUsers(response.Items);
+            setUsers(response);
             setLoading(false);
         } catch (e) {
           console.log('get call failed: ', e);

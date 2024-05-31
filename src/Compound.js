@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, NavLink } from "react-router-dom";
-import { get } from "aws-amplify/api";
-
 
 import Spinner from "react-bootstrap/Spinner";
 import Card from "react-bootstrap/Card";
@@ -26,20 +24,10 @@ function Compound ({ params, user }){
 
     async function getCompoundInfo(){
         try {
-            const restOperation = get({
-                apiName: "compounds",
-                path:"/getCompound",
-
-                options: {
-                    queryParams: {
-                    id: compoundId
-                    }
-                }
-            });
           
             const {body}= await restOperation.response;
             const response = await body.json();
-            setDetails(response.Item);
+            setDetails(response);
             document.title = response.Item.name;
             setLoading(false);
         } catch (e) {

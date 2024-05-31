@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { get } from "aws-amplify/api";
 
 import { NavLink } from "react-router-dom";
 
@@ -22,14 +21,10 @@ function Compounds({params, user}) {
 
     async function getCompounds(){
         try {
-            const restOperation = get({
-                apiName: "compounds",
-                path:"/getCompounds"
-            });
           
             const {body}= await restOperation.response;
             const response = await body.json();
-            setCompounds(response.Items);
+            setCompounds(response);
             setLoading(false);
         } catch (e) {
           console.log('get call failed: ', e);

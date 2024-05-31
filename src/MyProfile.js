@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLoaderData, NavLink, isRouteErrorResponse } from "react-router-dom";
-import { get } from "aws-amplify/api";
 
 
 import Spinner from "react-bootstrap/Spinner";

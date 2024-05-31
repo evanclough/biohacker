@@ -1,7 +1,6 @@
 
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { get } from "aws-amplify/api";
 
 
 import Spinner from "react-bootstrap/Spinner";
@@ -28,47 +27,12 @@ function Landing ({ params, user }){
         document.title = "biohacker";
         if(user?.userId !== null){
             try {
-                const restOperation = get({
-                    apiName: "users",
-                    path:"/getUser",
-                    options: {
-                        queryParams: {
-                            id: user.userId
-                        }
-                    }
-                });
+                
                 
                 const {body}= await restOperation.response;
                 const response = await body.json();
                 console.log(response);
-                if(response.Item){
-                    //fix ugly aws object format
-                    setDetails({
-                        id: response.Item.id.S,
-                        name: response.Item.name.S,
-                        username: response.Item.username.S,
-                        tags: response.Item.tags.L.map(t => t.S),
-                        verified: response.Item.verified.BOOL,
-                        demographics: {
-                            weight: response.Item.demographics.M?.weight?.N ?? -1,
-                            height: response.Item.demographics.M?.height?.N ?? -1,
-                            age: response.Item.demographics.M?.age?.N ?? -1
-                        },
-                        genetics: response.Item.genetics ? response.Item.genetics.L.map(g => {
-                            return {
-                                snp: g.M.snp.S,
-                                bases: g.M.bases.L.map(b => b.S),
-                                variant: g.M.variant.S
-                            }
-                        }) : []
-                    });
-
-                    setLoading(false);
-                    setIsLoggedIn(true);
-                }else {
-                    setError("Profile not found");
-                    setLoading(false);
-                }
+                
             } catch (e) {   
                 console.log('get call failed: ', e);
             }
