@@ -34,6 +34,7 @@ app.post(path, async function(req, res) {
   const description = req.body["description"];
   const children = req.body["children"];
   const parents = req.body["parents"];
+  const brandNames = req.body["brandNames"]
   const id = crypto.randomUUID();
 
   //todo: sanitize  
@@ -50,7 +51,8 @@ app.post(path, async function(req, res) {
       description,
       children,
       parents,
-      id
+      id,
+      brandNames
     }
   });
 

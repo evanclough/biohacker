@@ -68,17 +68,24 @@ function Compound ({ params, user }){
                                         </NavLink>
                                     
                                     ))}
+                                    {details.brandNames.length > 0 && 
+                                        <>
+                                            Brand Name{details.brandNames.length > 1 ? "s" : ""}: {details.brandNames.map((bn, bnIndex) => (
+                                               <>{bn}{bnIndex === details.brandNames.length - 1 ? "" : ", "}</>
+                                            ))}
+                                        </>
+                                    }
                                     {details.parents.length > 0 && 
                                         <>
                                             Parent Compound{details.parents.length > 1 ? "s" : ""}: {details.parents.map((parent, parentIndex) => (
-                                                <NavLink className="lnk" key={parentIndex} to={"/compounds/" + parent.id}>{parent.name}</NavLink>
+                                                <><NavLink className="lnk" key={parentIndex} to={"/compounds/" + parent.id}>{parent.name}</NavLink>{parentIndex === details.parents.length - 1 ? "" : ", "}</>
                                             ))}
                                         </>
                                     }
                                     {details.children.length > 0 && 
                                         <>
                                             Children Compound{details.children.length > 1 ? "s" : ""}: {details.children.map((child, childIndex) => (
-                                                <NavLink className="lnk" key={childIndex} to={"/compounds/" + child.id}>{child.name}</NavLink>
+                                                <><NavLink className="lnk" key={childIndex} to={"/compounds/" + child.id}>{child.name}</NavLink>{childIndex === details.children.length - 1 ? "" : ", "}</>
                                             ))}
                                         </>
                                     }
